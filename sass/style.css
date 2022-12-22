@@ -1,0 +1,39 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  width: 100vw;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 1.6rem;
+  font-family: "Titillium Web", sans-serif;
+}
+
+.nav-desktop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 10vh;
+  width: 100%;
+  padding: 0.5em;
+  font-size: 3rem;
+  background-color: #edf2f4;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.nav__item {
+  padding-right: 0.5em;
+  color: #2b2d42;
+  text-decoration: none;
+}/*# sourceMappingURL=style.css.map */

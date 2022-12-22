@@ -1,0 +1,50 @@
+$light: #edf2f4;
+$dark: #2b2d42;
+$primary: #d90429;
+$secondary: #8d99ae;
+$logo-font: 'Bebas Neue', cursive;
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    width: 100vw;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+    font-size: 1.6rem;
+    font-family: 'Titillium Web', sans-serif;
+    // color: $dark;
+}
+
+.nav-desktop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 10vh;
+    width: 100%;
+    padding: 0.5em;
+    font-size: 3rem;
+    background-color: $light;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+.nav{
+
+    &__item{
+        padding-right: .5em;
+        color: $dark;
+        text-decoration: none;
+    }
+}
