@@ -17,6 +17,7 @@ body {
   width: 100%;
   font-size: 1.6rem;
   font-family: "Titillium Web", sans-serif;
+  color: #2b2d42;
 }
 
 .nav-desktop {
@@ -24,8 +25,8 @@ body {
   top: 0;
   left: 0;
   height: 10vh;
+  line-height: 10vh;
   width: 100%;
-  padding: 0.5em;
   font-size: 3rem;
   background-color: #edf2f4;
   text-align: center;
@@ -36,4 +37,25 @@ body {
   padding-right: 0.5em;
   color: #2b2d42;
   text-decoration: none;
+}
+
+.header__img {
+  background-image: linear-gradient(60deg, rgba(18, 4, 217, 0.4941176471), rgba(43, 45, 66, 0.5176470588)), url("../img/car-63930_640.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
+
+@media (max-width: 768px) {
+  .nav-desktop {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  .nav-desktop {
+    display: block;
+  }
+  .header__img {
+    background-image: linear-gradient(60deg, rgba(217, 4, 39, 0.4941176471), rgba(43, 45, 66, 0.5176470588)), url("../img/car-63930_1920.jpg");
+  }
 }/*# sourceMappingURL=style.css.map */
