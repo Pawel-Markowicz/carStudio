@@ -2,7 +2,6 @@ $light: #edf2f4;
 $dark: #2b2d42;
 $primary: #d90429;
 $secondary: #8d99ae;
-$primary-gradient: linear-gradient(60deg, #d904277e, #2b2d4284 );
 $logo-font: 'Bebas Neue', cursive;
 
 
@@ -55,12 +54,29 @@ body{
 
 .header{
     &__img{
-        background-image: linear-gradient(60deg, #1204d97e, #2b2d4284), url('../img/car-63930_640.jpg');
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        background-image: linear-gradient(60deg, #53293073, #1f2142ab), url('../img/car-63930_640.jpg');
         background-position: center;
         background-size: cover;
         height: 100vh;
+        font-size: 4rem;
     }
 
+    &__text{
+        padding: 3em;
+        column-count: 3;
+        color: $light;
+        font-size: 2.4rem;
+    }
+    &__head{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 2em;
+        color: $light;
+    }
     
 }
 
@@ -78,7 +94,9 @@ body{
 
     .header{
         &__img{
-            background-image: linear-gradient(60deg, #d904277e, #2b2d4284), url('../img/car-63930_1920.jpg');
+            background-image: linear-gradient(60deg, #53293073, #1f2142ab), url('../img/car-63930_1920.jpg');
         }
+
+       
     }
 }
