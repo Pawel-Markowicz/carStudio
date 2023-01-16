@@ -60,13 +60,12 @@ body{
         background-image: linear-gradient(60deg, #53293073, #1f2142ab), url('../img/car-63930_640.jpg');
         background-position: center;
         background-size: cover;
-        height: 100vh;
+        height: 100%;
         font-size: 4rem;
     }
 
     &__text{
         padding: 3em;
-        column-count: 3;
         color: $light;
         font-size: 2.4rem;
     }
@@ -77,6 +76,10 @@ body{
         padding-top: 2em;
         color: $light;
     }
+
+    &__body{
+        display: flex;
+    }
     
 }
 
@@ -85,9 +88,26 @@ body{
     .nav-desktop{
         display: none;
     }
+
+    .header{
+        &__img{
+
+        }
+
+        &__head{
+            padding: .3m;
+        }
+
+        &__body{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+   
 }
 
-@media (min-width: 768px){
+@media (min-width: 768px) and (max-width: 992px){
     .nav-desktop{
         display: block;
     }
@@ -97,6 +117,14 @@ body{
             background-image: linear-gradient(60deg, #53293073, #1f2142ab), url('../img/car-63930_1920.jpg');
         }
 
+        &__body{
+            display: flex;
+
+        }
+
+        &__text{
+            padding: 1em;
+        }
        
     }
 }
