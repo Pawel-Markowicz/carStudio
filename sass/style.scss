@@ -27,28 +27,63 @@ body{
     color: $dark;
 }
 
-.nav-desktop{
+.nav__desktop{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: center;
     position: fixed;
     top: 0;
     left: 0;
     height: 10vh;
-    line-height: 10vh;
     width: 100%;
     font-size: 3rem;
     background-color: $light;
     text-align: center;
     text-transform: uppercase;
+
+    
+
+}
+
+.nav__mobile{
+    display: none;
 }
 
 
 
-.nav{
-    
 
+
+.nav{
+   position: absolute;
     &__item{
+        width: 150px;
         padding-right: .5em;
         color: $dark;
         text-decoration: none;
+    
+    }
+
+    &__item::after{
+        content: '';
+        display: block;
+        position: relative;
+        bottom: 0;
+        left: 0;
+        height: 3px;
+        width: 100%;
+        background-color: $primary;
+        transition: .3s transform;
+        transform: scale(0);
+        transform-origin: right;
+      
+    }
+
+    &__item:hover::after{
+        transform: scale(1);
+        transform-origin: left;
+        
+
     }
 }
 
@@ -57,6 +92,7 @@ body{
         display: flex;
         justify-content: space-around;
         flex-direction: column;
+        padding: 1em;
         background-image: linear-gradient(60deg, #53293073, #1f2142ab), url('../img/car-63930_640.jpg');
         background-position: center;
         background-size: cover;
@@ -64,10 +100,13 @@ body{
         font-size: 4rem;
     }
 
+    
     &__text{
+       
         padding: 3em;
         color: $light;
         font-size: 2.4rem;
+
     }
     &__head{
         display: flex;
@@ -107,6 +146,15 @@ body{
    
 }
 
+@media (min-width: 768px){
+    .header{
+        &__img{
+            background-image: linear-gradient(60deg, #53293073, #1f2142ab), url('../img/car-63930_1920.jpg');
+
+        }
+    }
+}
+
 @media (min-width: 768px) and (max-width: 992px){
     .nav-desktop{
         display: block;
@@ -114,7 +162,6 @@ body{
 
     .header{
         &__img{
-            background-image: linear-gradient(60deg, #53293073, #1f2142ab), url('../img/car-63930_1920.jpg');
         }
 
         &__body{
