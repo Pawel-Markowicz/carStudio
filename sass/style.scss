@@ -74,6 +74,14 @@ body{
     padding: 2em 3em;
 }
 
+.section-title{
+        text-align: center;
+        padding-top: 2.2em;
+        padding-bottom: 1em;
+        font-size: 4rem;
+        text-transform: uppercase;
+}
+
 .nav__desktop{
     display: flex;
     align-items: center;
@@ -104,7 +112,7 @@ body{
         padding-right: .5em;
         color: $dark;
         text-decoration: none;
-    
+        z-index: 10;
     }
 
     &__item::after{
@@ -113,19 +121,20 @@ body{
         position: relative;
         bottom: 0;
         left: 0;
-        height: 1.5px;
+        height: 2.5px;
         width: 100%;
         background-color: $primary;
         transition: .3s transform;
         transform: scale(0);
         transform-origin: right;
+        z-index: 100;
       
     }
 
     &__item:hover::after{
+        content: '';
         transform: scale(1);
         transform-origin: left;
-        
 
     }
 }
@@ -175,13 +184,7 @@ body{
 }
 
 .aboutus{
-    &__title{
-        text-align: center;
-        padding-top: 2.2em;
-        padding-bottom: 1em;
-        font-size: 4rem;
-        text-transform: uppercase;
-    }
+  
 
     &__car{
         padding: 2em 4em;
@@ -198,12 +201,102 @@ body{
 }
 
 
+.prices{
+    background-color: $secondary;
+    color: $light;
+
+    &__container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    &__box{
+        display: flex;
+        justify-content: space-around;
+        
+    }
+
+    &__item{
+        width: 30%;
+        
+    }
+
+    &__box-titles{
+        text-align: center;
+        font-size: 3rem;
+        padding: 1em;
+    }
+
+    &__item-img{
+        object-fit: cover;
+        width: 90%;
+    }
+
+    &__item-text{
+        font-size: 1.6rem;
+    }
+}
+
+
+// ---------------MEDIA QUERIES--------------------
+
+
+
+@media (max-width: 576px){
+
+    .nav__item{
+        font-size: 2rem;
+}
+
+
+    .header{
+
+        &__head{
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+        }
+        
+        &__body{
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+        }
+        &__body-text{
+            color: $light;
+            font-size: 1.2rem;
+        }
+
+        &__head{
+            padding-top: 7em;
+            padding-right: 6em;
+            font-size: 3rem;
+        }
+
+        
+    }
+}
 
 
 @media (max-width: 768px){
-    .nav-desktop{
-        display: none;
+    .prices{
+        &__box{
+            flex-direction: column;
+        }
+
+        &__item{
+            width: 100%;
+        }
+
+        &__item-text{
+            padding-bottom: 2em;
+        }
     }
+}
+
+@media (min-width: 576px) and (max-width: 768px){
+    
 
     .header{
       
@@ -239,6 +332,8 @@ body{
         }
     }
 
+
+  
    
 }
 
@@ -252,9 +347,7 @@ body{
 }
 
 @media (min-width: 768px) and (max-width: 992px){
-    .nav-desktop{
-        display: block;
-    }
+   
 
     .header{
         
@@ -270,4 +363,13 @@ body{
         }
        
     }
+
+
+    .prices{
+
+        &__item-text p{
+            font-size: 1.4rem;
+        }
+    }
+
 }
